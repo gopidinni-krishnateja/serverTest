@@ -1,0 +1,16 @@
+{
+  "generator-ng-fullstack": {
+    "appName": "ticketManagemantSystem",
+    "username": "ticket",
+    "userEmail": "user.email@example.com",
+    "stack": "server",
+    "repoHostUrl": "github.com",
+    "userNameSpace": "ticket",
+    "client": "",
+    "server": "node",
+    "nodeWebFrameworkServer": "express",
+    "transpilerServer": "babel",
+    "secure": true,
+    "testsSeparated": true
+  }
+}
