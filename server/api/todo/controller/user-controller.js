@@ -31,10 +31,11 @@ export default class UserController {
       });
   }
   static removeById(req, res) {
-    const _id = req.params.id;
+
+    const _id = req.params.firstName;
     console.log(_id)
     UserDAO
-      .removeById(_id)
+      .removeById(req.params.id)
       .then(() => res.status(204).end())
       .catch(error => {
         if (error === 404)

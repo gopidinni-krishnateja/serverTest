@@ -48,13 +48,15 @@ export  default class userDAO
       models.User
         .findById(_id)
         .then(User => {
+
           if (!User) {
+            console.log("dfd"+_id)
             return reject(404);
           }
           return User.destroy()
             .then(() => { resolve(204); }, (error) => reject(error));
         }, (error) => {
-          logger.error(`Internal error while deleting user: ${error}`);
+          //logger.error(`Internal error while deleting user: ${error}`);
           reject(error);
         });
     });

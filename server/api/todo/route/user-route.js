@@ -8,7 +8,7 @@ export default class UserRoutes {
       .post(UserController.createNew)
       .put(UserController.update);
     router
-      .route("/api/todos/:id")
+      .route("/api/todo/:id")
       .delete(UserController.removeById);
     /*// router
     // .route("/api/todos/:id")
