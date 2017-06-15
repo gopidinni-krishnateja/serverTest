@@ -11,7 +11,7 @@ export default class UserController {
           .json(new SuccessResponse(models.User.firstName,models.User.lastName,models.User.email,models.User.password,models.User.address, User));
       })
       .catch(error => {
-        res.status(400).json(error);
+
       });
   }
   static update(req, res) {

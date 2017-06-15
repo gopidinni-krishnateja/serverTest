@@ -15,15 +15,12 @@ export  default class userDAO
         email: _reqBody.email,
         password:  _reqBody.password,
         address: _reqBody.address
-      }).then(request => {
-        console.log("hello")
-      })
-        .catch(error => {
-          console.log(error)
-          //logger.info(`error: ${error}`);
-          /*res.status
-          res.status(400).json(error);*/
-        });
+      }).then((User) => {
+        res.send(User)
+        resolve(User);
+      }, (error) => {
+        reject(error);
+      });
     });
   }
   static update(_reqBody) {
@@ -50,7 +47,6 @@ export  default class userDAO
         .then(User => {
 
           if (!User) {
-            console.log("dfd"+_id)
             return reject(404);
           }
           return User.destroy()
